@@ -3,5 +3,5 @@
 @section('title', 'Page non trouvée')
 
 @section('content')
-    <h3>Erreur 404 - Page non trouvée</h3>
+    <h2>Erreur 404 - Page non trouvée</h2>
 @endsection
