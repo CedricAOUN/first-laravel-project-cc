@@ -1,13 +1,7 @@
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>Page non trouvée</title>
-</head>
+@section('title', 'Page non trouvée')
 
-<body>
-    <div>
-        <h1>Erreur 404 - Page non trouvée</h1>
-    </div>
-</body>
-
-</html>
+@section('content')
+    <h3>Erreur 404 - Page non trouvée</h3>
+@endsection
