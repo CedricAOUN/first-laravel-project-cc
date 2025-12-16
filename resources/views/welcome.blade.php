@@ -7,7 +7,9 @@
 <h2>Liste des articles : </h2>
 <div>
     @forelse ($articles as $article)
+    @if (!$loop->last)
     <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" />
+    @endif
     @empty
     <p>Aucun article disponible.</p>
     @endforelse
