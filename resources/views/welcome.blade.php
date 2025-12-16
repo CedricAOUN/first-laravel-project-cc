@@ -10,7 +10,7 @@
     @if ($loop->last)
     @break
     @endif
-    <x-article title="{{ $article['title'] }}" description="{{ Str::limit($article['description'], 30, '...') }}" />
+    <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" />
     @empty
     <p>Aucun article disponible.</p>
     @endforelse
