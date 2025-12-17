@@ -10,7 +10,9 @@
     @if ($loop->last)
     @break
     @endif
-    <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" articleId="{{ $article['article_id'] }}" />
+    <a href="{{ route('article.details', ['id' => $article['id']]) }}" style="color: blue;">
+        <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" />
+    </a>
     @empty
     <p>Aucun article disponible.</p>
     @endforelse

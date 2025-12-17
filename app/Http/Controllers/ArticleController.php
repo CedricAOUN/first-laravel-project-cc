@@ -10,7 +10,9 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::find($id);
-
+        if (!$article) {
+            return 'Article non trouvé.';
+        }
         return view('pages.article-details', ['id' => $id, 'article' => $article]);
     }
 
@@ -36,12 +38,12 @@ class ArticleController extends Controller
         }
     }
 
-    public function modifyArticles($id, $title, $description)
+    public function modifyArticles($id, $title = 'Nouveau titre', $description = 'Nouvelle description')
     {
         $article = Article::find($id);
         if ($article) {
-            $article->title = $title ?? $article->title;
-            $article->description = $description ?? $article->description;
+            $article->title = $title;
+            $article->description = $description;
             $article->save();
             return "Article ID {$id} modifié.";
         } else {
