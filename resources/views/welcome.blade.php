@@ -10,7 +10,7 @@
     @if ($loop->last)
     @break
     @endif
-    <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" />
+    <x-article title="{{ $article['title'] }}" description="{{ $article['description'] }}" articleId="{{ $article['article_id'] }}" />
     @empty
     <p>Aucun article disponible.</p>
     @endforelse
