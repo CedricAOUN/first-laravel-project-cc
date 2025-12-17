@@ -3,9 +3,5 @@
 @section('title', 'Article ' . $id)
 
 @section('content')
-<div>
-    <h2>Details pour l'Article : {{ $id }}</h2>
-    <h3> {{ $article->title }} </h3>
-    <p> {{ $article->description }} </p>
-</div>
+<x-article title="{{ $article->title }}" description="{{ $article->description }}" />
 @endsection

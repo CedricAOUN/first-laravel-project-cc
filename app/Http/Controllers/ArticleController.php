@@ -38,12 +38,12 @@ class ArticleController extends Controller
         }
     }
 
-    public function modifyArticles($id, $title = 'Nouveau titre', $description = 'Nouvelle description')
+    public function modifyArticles($id)
     {
         $article = Article::find($id);
         if ($article) {
-            $article->title = $title;
-            $article->description = $description;
+            $article->title = "Titre modifié";
+            $article->description = "Description modifiée";
             $article->save();
             return "Article ID {$id} modifié.";
         } else {
